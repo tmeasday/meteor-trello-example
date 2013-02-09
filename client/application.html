@@ -17,8 +17,17 @@
     <h2>{{type}}</h2>
     <ul class="tasks">
       {{#each tasks}}
-        <li>{{title}}</li>
+        {{> task}}
       {{/each}}
     </ul>
   </div>
+</template>
+
+
+<template name="task">
+  <li>
+    <h4>{{title}}</h4>
+    {{#if prevList}}<a href="#" class="prevList">« {{prevList}}</a>{{/if}}
+    {{#if nextList}}<a href="#" class="nextList">{{nextList}} »</a>{{/if}}
+  </li>
 </template>

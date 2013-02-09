@@ -1,5 +1,4 @@
 if (Lists.find().count() === 0) {
-  
   var listData = ['todo', 'doing', 'done']
   var taskData = {
     todo: ['Use Proper Collection', 'Style it'],

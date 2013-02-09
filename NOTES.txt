@@ -1,0 +1,2 @@
+- should we have a lists collection, or just use an array??
+- how should we link tasks to lists?
