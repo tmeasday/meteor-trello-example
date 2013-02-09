@@ -1,9 +1,9 @@
 Template.taskLists.helpers({
-  types: Lists,
+  types: function() { return Lists.find(); },
   listData: function() {
     return {
-      type: this,
-      tasks: Tasks[this]
+      type: this.type,
+      tasks: Tasks.find({listId: this._id})
     }
   }
 });
