@@ -1,0 +1,24 @@
+<head>
+  <title>Task Tracker</title>
+</head>
+
+<body>
+  {{> taskLists}}
+</body>
+
+<template name="taskLists">
+  {{#each types}}
+    {{> taskList listData}}
+  {{/each}}
+</template>
+
+<template name="taskList">
+  <div class="list">
+    <h2>{{type}}</h2>
+    <ul class="tasks">
+      {{#each tasks}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
